@@ -10,6 +10,15 @@ Estilo visual y funcionalidades para personalizar [Estuary](https://estuary.mcma
 3 - Abrir el panel de Herramientas de Desarrollador.
 4 - En la pestaña "Consola" ejecutar el siguiente código:
 
-    let s = document.createElement('script');
-    s.src = 'https://raw.githubusercontent.com/caalma/estuary-personalizacion/main/personalizacion.js';
-    document.head.appendChild(s);
+    (function (){
+        const css = [
+            "@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');",
+            "* { font-family: 'Fira Code' !important; letter-spacing: -0.05em; }"
+        ];
+        let head = document.head || document.getElementsByTagName('head')[0],
+            style = document.createElement('style');
+
+        head.appendChild(style);
+        style.type = 'text/css';
+        style.appendChild(document.createTextNode(css.join('\n')));
+    })()
