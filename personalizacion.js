@@ -1,5 +1,5 @@
 
-;(function(){
+function personalizar(){
     const css = [
         "@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');",
         "* { font-family: 'Fira Code' !important; letter-spacing: -0.05em; }"
@@ -11,4 +11,4 @@
 
     style.type = 'text/css';
     style.appendChild(document.createTextNode(css.join('\n')));
-})()
+};
