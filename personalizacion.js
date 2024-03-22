@@ -9,3 +9,5 @@ head.appendChild(style);
 
 style.type = 'text/css';
 style.appendChild(document.createTextNode(css.join(' ')));
+
+console.log(123, 'personalizado');
